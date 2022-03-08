@@ -66,3 +66,10 @@ EOT
 
   value = local.account_info
 }
+
+output "organization_prefix" {
+  description = <<-EOT
+  The prefix for all SSM parameters or log groups.
+EOT
+  value       = local.org_prefix
+}
