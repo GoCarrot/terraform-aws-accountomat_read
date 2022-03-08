@@ -48,7 +48,7 @@ EOT
 
 output "param_prefix" {
   description = "The prefix under which SSM parameters for this account are stored."
-  value       = local.account_info["prefix"]
+  value       = local.param_prefix
 }
 
 output "roles" {

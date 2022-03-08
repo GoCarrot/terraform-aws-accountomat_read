@@ -32,6 +32,7 @@ data "aws_ssm_parameter" "account_info" {
 locals {
   account_info = jsondecode(nonsensitive(data.aws_ssm_parameter.account_info.value))
   org_prefix   = nonsensitive(data.aws_ssm_parameter.org_prefix.value)
+  param_prefix = local.account_info["prefix"]
 }
 
 data "aws_ssm_parameters_by_path" "roles" {
