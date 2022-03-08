@@ -1,6 +1,6 @@
 # Accountomat Read
 
-Accountomat Read reads data peristed by [Accountomat](https:://github.com/GoCarrot/terraform-aws-accountomat) and provides it for use in terraform modules.
+Accountomat Read reads data peristed by [Accountomat](https://github.com/GoCarrot/terraform-aws-accountomat) and provides it for use in terraform modules.
 
 ## Example usage
 ```hcl
