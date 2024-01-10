@@ -1,3 +1,9 @@
+## 0.0.5
+
+ENHANCEMENTS:
+
+* Support looking up account information by account id.
+
 ## 0.0.4
 
 ENHANCEMENTS:
