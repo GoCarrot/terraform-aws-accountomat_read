@@ -14,6 +14,13 @@
 
 
 variable "canonical_slug" {
-  description = "The canonical_slug for the account as assigned by Accountomat."
+  description = "The canonical_slug for the account as assigned by Accountomat. One of canonical_slug or account_id must be provided. If both are provided, canonical_slug will be preferred."
   type        = string
+  default     = null
+}
+
+variable "account_id" {
+  description = "The AWS assigned id for the account. One of canonical_slug or account_id must be provided. If both are provided, canonical_slug will be preferred."
+  type        = string
+  default     = null
 }

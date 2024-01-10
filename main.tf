@@ -21,12 +21,16 @@ terraform {
   }
 }
 
+locals {
+  account_info_param = var.canonical_slug == null ? "/omat/account_id_registry/${var.account_id}" : "/omat/account_registry/${var.canonical_slug}"
+}
+
 data "aws_ssm_parameter" "org_prefix" {
   name = "/omat/organization_prefix"
 }
 
 data "aws_ssm_parameter" "account_info" {
-  name = "/omat/account_registry/${var.canonical_slug}"
+  name = local.account_info_param
 }
 
 locals {
